@@ -4,7 +4,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.generic import View, ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from .forms import CommentForm, PostForm
+# from .forms import CommentForm, PostForm
 from .models import Post, Author, PostView
 from marketing.forms import EmailSignupForm
 from marketing.models import Signup
@@ -142,7 +142,7 @@ class PostDetailView(DetailView):
     model = Post
     template_name = 'post.html'
     context_object_name = 'post'
-    form = CommentForm()
+    # form = CommentForm()
 
     def get_object(self):
         obj = super().get_object()
@@ -204,7 +204,7 @@ def post_detail(request, id):
 class PostCreateView(CreateView):
     model = Post
     template_name = 'post_create.html'
-    form_class = PostForm
+    # form_class = PostForm
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -240,7 +240,7 @@ def post_create(request):
 class PostUpdateView(UpdateView):
     model = Post
     template_name = 'post_create.html'
-    form_class = PostForm
+    # form_class = PostForm
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

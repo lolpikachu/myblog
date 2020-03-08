@@ -4,7 +4,7 @@ certifi
 chardet
 defusedxml==0.5.0
 Django
-django-allauth1
+django-allauth
 django-crispy-forms
 django-tinymce4-lite
 gunicorn

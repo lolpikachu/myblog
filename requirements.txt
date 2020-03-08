@@ -2,7 +2,7 @@ astroid
 autopep8
 certifi
 chardet
-defusedxml1
+defusedxml==0.5.0
 Django
 django-allauth1
 django-crispy-forms
